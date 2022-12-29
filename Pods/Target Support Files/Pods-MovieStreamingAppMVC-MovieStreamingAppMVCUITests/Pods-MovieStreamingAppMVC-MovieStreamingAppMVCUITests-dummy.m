@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_MovieStreamingAppMVC_MovieStreamingAppMVCUITests : NSObject
+@end
+@implementation PodsDummy_Pods_MovieStreamingAppMVC_MovieStreamingAppMVCUITests
+@end

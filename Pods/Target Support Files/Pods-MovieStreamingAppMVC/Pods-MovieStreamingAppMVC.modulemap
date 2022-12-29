@@ -1,0 +1,6 @@
+framework module Pods_MovieStreamingAppMVC {
+  umbrella header "Pods-MovieStreamingAppMVC-umbrella.h"
+
+  export *
+  module * { export * }
+}

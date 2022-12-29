@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xgo-cw-qYL">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TopMoviesViewController-->
+        <scene sceneID="q7k-Sv-md6">
+            <objects>
+                <viewController storyboardIdentifier="TopMoviesViewController" title="TopMoviesViewController" id="XqW-72-4aG" customClass="TopMoviesViewController" customModule="MovieStreamingAppMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pv1-nI-zad" customClass="TopMoviesView" customModule="MovieStreamingAppMVC" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ueg-CI-iA9">
+                                <rect key="frame" x="0.0" y="103" width="430" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pv1-nI-zad" id="XGk-PK-660"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SRk-Em-loo">
+                                <rect key="frame" x="0.0" y="159" width="430" height="690"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" rowHeight="160" id="XsR-yc-G1k" customClass="TableViewCell" customModule="MovieStreamingAppMVC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XsR-yc-G1k" id="Aiu-I4-neh">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="elQ-9n-yiX">
+                                                    <rect key="frame" x="7" y="0.0" width="126" height="160"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jurassic World Dominion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mmx-8Q-fFV">
+                                                    <rect key="frame" x="143" y="5" width="273" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4qa-9U-r49">
+                                                    <rect key="frame" x="143" y="43" width="45" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QrU-tA-V3Y">
+                                                    <rect key="frame" x="143" y="63" width="263" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uCU-30-ryN">
+                                                    <rect key="frame" x="196" y="43" width="54" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.11097402720000001" green="0.037053122889999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.43602863159999999" green="0.82733320290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="backdropImage" destination="elQ-9n-yiX" id="UrM-Mw-YF8"/>
+                                            <outlet property="detailLabel" destination="QrU-tA-V3Y" id="p1d-g7-vzl"/>
+                                            <outlet property="relelaseYearLabel" destination="uCU-30-ryN" id="skC-JY-FoS"/>
+                                            <outlet property="scoreLabel" destination="4qa-9U-r49" id="qwC-0a-jQz"/>
+                                            <outlet property="titleLabel" destination="mmx-8Q-fFV" id="3sS-Zv-gTv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pv1-nI-zad" id="QvN-7d-KoF"/>
+                                    <outlet property="delegate" destination="Pv1-nI-zad" id="qiU-oa-igd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ddd-2Q-DqR"/>
+                        <color key="backgroundColor" red="0.43602863159999999" green="0.82733320290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SRk-Em-loo" firstAttribute="leading" secondItem="Ddd-2Q-DqR" secondAttribute="leading" id="BgR-1n-UtZ"/>
+                            <constraint firstItem="Ddd-2Q-DqR" firstAttribute="trailing" secondItem="SRk-Em-loo" secondAttribute="trailing" id="KOg-UG-QOj"/>
+                            <constraint firstItem="Ueg-CI-iA9" firstAttribute="top" secondItem="Ddd-2Q-DqR" secondAttribute="top" id="NUA-To-JAW"/>
+                            <constraint firstItem="Ueg-CI-iA9" firstAttribute="trailing" secondItem="Ddd-2Q-DqR" secondAttribute="trailing" id="VWq-3g-rVj"/>
+                            <constraint firstItem="Ueg-CI-iA9" firstAttribute="leading" secondItem="Ddd-2Q-DqR" secondAttribute="leading" id="i1W-wR-lyf"/>
+                            <constraint firstItem="Ddd-2Q-DqR" firstAttribute="bottom" secondItem="SRk-Em-loo" secondAttribute="bottom" id="mCt-0p-sWv"/>
+                            <constraint firstItem="SRk-Em-loo" firstAttribute="top" secondItem="Ueg-CI-iA9" secondAttribute="bottom" id="rf9-e6-SdK"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="searchBar" destination="Ueg-CI-iA9" id="aEJ-k2-EhT"/>
+                            <outlet property="topMoviesTableView" destination="SRk-Em-loo" id="3mr-lh-t9e"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="8HX-iI-j6P"/>
+                    <connections>
+                        <outlet property="customView" destination="Pv1-nI-zad" id="Gfg-s8-uCa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UI4-hr-N46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-389" y="773"/>
+        </scene>
+        <!--PlayingViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PlayingViewController" title="PlayingViewController" id="BYZ-38-t0r" customClass="PlayingViewController" customModule="MovieStreamingAppMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="PlayingMoviesView" customModule="MovieStreamingAppMVC" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="Bz1-lZ-ZfS">
+                                <rect key="frame" x="0.0" y="103" width="430" height="56"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="ydC-Dp-uS8"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iMi-az-vs1">
+                                <rect key="frame" x="0.0" y="159" width="430" height="690"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" rowHeight="160" id="LNt-wH-OPT" customClass="TableViewCell" customModule="MovieStreamingAppMVC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LNt-wH-OPT" id="RVx-Th-iLc">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="r9v-Tm-nFd">
+                                                    <rect key="frame" x="7" y="0.0" width="126" height="160"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jurassic World Dominion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HW0-Mt-9sW">
+                                                    <rect key="frame" x="143" y="5" width="273" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t9Y-5z-PiP">
+                                                    <rect key="frame" x="143" y="43" width="45" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="etA-En-Zan">
+                                                    <rect key="frame" x="143" y="63" width="263" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ytX-Qq-LPB">
+                                                    <rect key="frame" x="196" y="43" width="54" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.11771439879999999" green="0.073262232309999994" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.43602863159999999" green="0.82733320290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="backdropImage" destination="r9v-Tm-nFd" id="rCb-Za-ZM9"/>
+                                            <outlet property="detailLabel" destination="etA-En-Zan" id="CLE-bc-h8S"/>
+                                            <outlet property="relelaseYearLabel" destination="ytX-Qq-LPB" id="Dd3-MS-b2h"/>
+                                            <outlet property="scoreLabel" destination="t9Y-5z-PiP" id="FqR-lo-7I4"/>
+                                            <outlet property="titleLabel" destination="HW0-Mt-9sW" id="48N-42-Jvn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="fyq-09-TUa"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="XE8-nQ-BQb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.43602863159999999" green="0.82733320290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iMi-az-vs1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7Xq-jV-aMs"/>
+                            <constraint firstItem="Bz1-lZ-ZfS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D9l-nm-592"/>
+                            <constraint firstItem="iMi-az-vs1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FEZ-C9-23K"/>
+                            <constraint firstItem="iMi-az-vs1" firstAttribute="top" secondItem="Bz1-lZ-ZfS" secondAttribute="bottom" id="Hqw-Fx-CLW"/>
+                            <constraint firstItem="Bz1-lZ-ZfS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PpM-wU-Jgc"/>
+                            <constraint firstItem="iMi-az-vs1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RwZ-Fy-0eV"/>
+                            <constraint firstItem="Bz1-lZ-ZfS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ifx-rT-8Xe"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="searchBar" destination="Bz1-lZ-ZfS" id="WTT-o9-Fl3"/>
+                            <outlet property="tableView" destination="iMi-az-vs1" id="K5g-IA-BtG"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="RlH-Ml-QiY"/>
+                    <connections>
+                        <outlet property="playingView" destination="8bC-Xf-vdC" id="CGG-BB-vnI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="773"/>
+        </scene>
+        <!--PopularMoviesViewController-->
+        <scene sceneID="yGS-Au-A5o">
+            <objects>
+                <viewController storyboardIdentifier="PopularViewController" title="PopularMoviesViewController" id="VVU-dp-aoe" customClass="PopularViewController" customModule="MovieStreamingAppMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bW9-Om-FOJ" customClass="PopularView" customModule="MovieStreamingAppMVC" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="hqs-hU-8xI">
+                                <rect key="frame" x="0.0" y="103" width="430" height="56"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bW9-Om-FOJ" id="o3F-hI-hZv"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qgC-CI-Fj0">
+                                <rect key="frame" x="0.0" y="159" width="430" height="690"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" rowHeight="160" id="abI-bQ-yDf" customClass="TableViewCell" customModule="MovieStreamingAppMVC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="430" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="abI-bQ-yDf" id="J7h-AN-4hi">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Czm-nW-Mub">
+                                                    <rect key="frame" x="9" y="0.0" width="125" height="160"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jurassic World Dominion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1mA-aT-yyM">
+                                                    <rect key="frame" x="143" y="5" width="274" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="du1-Zq-tJG">
+                                                    <rect key="frame" x="143" y="43" width="46" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ev0-mB-608">
+                                                    <rect key="frame" x="143" y="63" width="263" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</string>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EHP-Gh-pQQ">
+                                                    <rect key="frame" x="199" y="43" width="53" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.11771439879999999" green="0.073262232309999994" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.43602863159999999" green="0.82733320290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="backdropImage" destination="Czm-nW-Mub" id="EYd-aL-Bd0"/>
+                                            <outlet property="detailLabel" destination="Ev0-mB-608" id="Hhe-w8-duM"/>
+                                            <outlet property="relelaseYearLabel" destination="EHP-Gh-pQQ" id="CNV-sK-1yR"/>
+                                            <outlet property="scoreLabel" destination="du1-Zq-tJG" id="W7c-WD-KMM"/>
+                                            <outlet property="titleLabel" destination="1mA-aT-yyM" id="7uL-3I-i3C"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bW9-Om-FOJ" id="dec-5E-NlX"/>
+                                    <outlet property="delegate" destination="bW9-Om-FOJ" id="k0d-KC-K5V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VaO-oq-CK2"/>
+                        <color key="backgroundColor" red="0.43602863159999999" green="0.82733320290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qgC-CI-Fj0" firstAttribute="trailing" secondItem="VaO-oq-CK2" secondAttribute="trailing" id="4Ra-mX-Ne4"/>
+                            <constraint firstItem="hqs-hU-8xI" firstAttribute="leading" secondItem="VaO-oq-CK2" secondAttribute="leading" id="DWf-6r-Mlj"/>
+                            <constraint firstItem="qgC-CI-Fj0" firstAttribute="bottom" secondItem="VaO-oq-CK2" secondAttribute="bottom" id="dEA-5A-TtR"/>
+                            <constraint firstItem="qgC-CI-Fj0" firstAttribute="leading" secondItem="VaO-oq-CK2" secondAttribute="leading" id="mEM-D9-WLl"/>
+                            <constraint firstItem="qgC-CI-Fj0" firstAttribute="top" secondItem="hqs-hU-8xI" secondAttribute="bottom" id="oaN-Yc-1XH"/>
+                            <constraint firstItem="qgC-CI-Fj0" firstAttribute="top" secondItem="hqs-hU-8xI" secondAttribute="bottom" id="rb9-BX-OBR"/>
+                            <constraint firstItem="qgC-CI-Fj0" firstAttribute="top" secondItem="hqs-hU-8xI" secondAttribute="bottom" id="wKK-KI-EjY"/>
+                            <constraint firstItem="hqs-hU-8xI" firstAttribute="trailing" secondItem="VaO-oq-CK2" secondAttribute="trailing" id="xdf-js-Dew"/>
+                            <constraint firstItem="hqs-hU-8xI" firstAttribute="top" secondItem="VaO-oq-CK2" secondAttribute="top" id="xgc-vW-BgS"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="searchBar" destination="hqs-hU-8xI" id="5pw-dy-ppW"/>
+                            <outlet property="tableView" destination="qgC-CI-Fj0" id="KQu-iC-4L2"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="7jy-Kw-34y"/>
+                    <connections>
+                        <outlet property="popularView" destination="bW9-Om-FOJ" id="sYU-vB-oWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twD-Y5-1zL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="773"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2EE-qw-F37">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Xgo-cw-qYL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kPQ-52-u2P"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="YnD-pf-XcD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9gc-WC-K4h" kind="relationship" relationship="viewControllers" id="soZ-nG-i8o"/>
+                        <segue destination="DBQ-Qk-sKW" kind="relationship" relationship="viewControllers" id="4Tx-dZ-35b"/>
+                        <segue destination="kAd-Gv-fsd" kind="relationship" relationship="viewControllers" id="8i0-NR-lt5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSe-Ml-k93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DyB-90-aYw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9gc-WC-K4h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="NDR-mf-XbH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BEb-1T-Kyu">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XqW-72-4aG" kind="relationship" relationship="rootViewController" id="OkD-5a-vJa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tcP-FY-VuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388.4765625" y="69.399707174231324"/>
+        </scene>
+        <!--Now Playing-->
+        <scene sceneID="PFk-rz-oAs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DBQ-Qk-sKW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="play.square.fill" catalog="system" id="OxC-SM-nbf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4LF-Ez-5b2">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Bua-HV-y14"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0W-zf-MK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="69"/>
+        </scene>
+        <!--Popular-->
+        <scene sceneID="Oau-k8-bpC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kAd-Gv-fsd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Popular" image="flame.fill" catalog="system" id="P6D-i3-Z5E"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0uE-9L-HxB">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VVU-dp-aoe" kind="relationship" relationship="rootViewController" id="TS7-Yf-RrW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKe-67-djr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="69"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flame.fill" catalog="system" width="106" height="128"/>
+        <image name="play.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
