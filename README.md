@@ -1,6 +1,8 @@
 # MovieStreamingApp
 Developed by using URLSession and MVC pattern
 
-<img width="337" alt="MovieApp 1" src="https://user-images.githubusercontent.com/107641866/198886985-9e03741a-763b-40d3-9d59-a9ea90c486b1.png">
-<img width="337" alt="MovieApp 2" src="https://user-images.githubusercontent.com/107641866/198886988-e4fb8a7e-c987-4e0b-aab0-a35814e97e6f.png">
+<img width="350" alt="1" src="https://user-images.githubusercontent.com/107641866/210014929-dc3f242b-e845-44e0-8d3c-81b1d4b481c0.png">
+<img width="350" alt="2" src="https://user-images.githubusercontent.com/107641866/210014934-e32d9d7d-563f-4287-a5be-908a67c75161.png">
+
+
 
